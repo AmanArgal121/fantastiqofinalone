@@ -12,8 +12,9 @@
     href="https://fonts.googleapis.com/css2?family=Alegreya+SC&family=Alegreya+Sans+SC:wght@300;400&family=Anton&family=Barlow:wght@300&family=Bebas+Neue&family=Cormorant+SC:wght@300;400;500;600;700&family=Cuprum:wght@400;500&family=Goldman:wght@400;700&family=Josefin+Slab:wght@300;400;600&family=Kanit:wght@500&family=Lato:wght@300;400;700&family=Lobster&family=Philosopher:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Secular+One&family=Teko:wght@300;400;500&family=Unna:wght@400;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="index.css">
+  <!-- <link rel="stylesheet" href="index.css"> -->
   <link rel="stylesheet" href="style.css">
+  <script src="app.js"></script>
   <link rel="icon" href="images\1.png" type="image/png">
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
@@ -26,17 +27,17 @@
     <h1>FANTASTIQO</h1>
     <!-- <h1>Visitor Log</h1> -->
     <h5>Before we continue, please fill out this form.</h5>
-    <form class="formbody" action="submit.php" method="post">
+    <form class="formbody" action="submit.php" method="post" onsubmit="return validateform()">
       <div><span>Name</span>
-        <input type="text" name="name" placeholder="Eg. - John Doe" class="input" required></input>
+        <input type="text" name="name" placeholder="Eg. - John Doe" class="input" pattern="[A-Za-z ]{3,}" title="Name must be alphabets only and greater than 3 letters" id="nameinput" required></input>
       </div>
       <div><span>Email</span>
-        <input type="email" name="email" placeholder="Eg. - ABCD1234@gmail.com" class="input" required></input>
+        <input type="email" name="email" placeholder="Eg. - ABCD1234@gmail.com" class="input" id="mailinput" title="please enter a valid email id" required></input>
       </div>
       <div><span>Contact Number</span>
-        <input type="tel" name="contact_number" placeholder="Eg. - 9876543210" required class="input"></input>
+        <input type="tel" name="contact_number" placeholder="Eg. - 9876543210" pattern="[0-9]{10}" title="Phone number must be 10 digits, no country code" required id="numinput" class="input"></input>
       </div>
-      <input type="submit" class="submit-btn" href="/index.html" name="submit" value="SUBMIT" align-items-center
+      <input type="submit" class="submit-btn" href="/index.html" name="submit" onclick="validateform()" value="SUBMIT" align-items-center
         id="sumbit"></input>
     </form>
     <div class="socials">
