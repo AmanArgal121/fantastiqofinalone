@@ -443,13 +443,14 @@ img{
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 63%;
+    width: 68%;
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.438), rgba(255, 255, 255, 0.63), rgba(255, 255, 255, 0.438));
     height: 80%;
     border: 2px solid rgba(255, 255, 255, 0.61);
     backdrop-filter: blur(1px);
     border-radius: 15px;
     align-items: center;
+    justify-content: center;
 }
 .formdiv>*{
     backdrop-filter: blur(0px);
@@ -459,7 +460,7 @@ img{
     position: absolute;
     bottom: auto;
     height: 60%;
-    top: 32%;
+    top: 28%;
     left: 0;
     /* background-color: aqua; */
     flex-direction: column;
@@ -490,18 +491,29 @@ img{
     bottom: 4.5rem;
 }
 .formdiv h5{
-    top: 25%;
-    left: 7%;
+    top: 18%;
     font-size: 1.8rem;
     font-weight: 500;
+    text-align: center;
+    left: auto;
+    right: auto;
     color: rgb(0, 0, 0);
-}
-.formdiv h1, .formdiv h3, .formdiv h5{
-    margin-right: 7%;
+    margin: 0 5rem;
 } 
+.formdiv h1{
+    position: absolute;
+    top: 5%;
+    left: auto;
+    right: auto;
+    margin: 0 0;
+}
 .sliderdiv{
     width: 100%;
     position: absolute;
+}
+.submit-btn{
+    position: absolute;
+    bottom: 5%;
 }
 #toprightdesg, #downrightgrp, #toprectgrp, #downtrg{
     z-index: 80;
@@ -511,14 +523,11 @@ img{
     html{
         font-size: 45%;
     }
-    .formbody{
-        top: 35%;
-    }
-    .formbody button{
-    bottom: 5.8rem;
+    .submit-btn{
+    bottom: 8%;
     }
     .formdiv h5{
-        top: 24%;
+        margin: 0 5rem;
     }
 }
 @media screen and (max-width:450px){
@@ -531,31 +540,23 @@ img{
     }
 }
 @media screen and (max-width:390px){
-    html{
-        font-size: 45%;
-    }
-    .formdiv{
-    width: 80%;
-    }
     .formdiv h1{
-        top: 11%;
-        font-size: 4.8rem;
+        font-size: 4.5rem;
+        margin: 0 0;
     }
     .formdiv h5{
-        top: 23%;
+        margin: 0 2rem;
     }
     .formbody{
-        top: 33%;
+        top: 28%;
     }
     .formbody button{
-        bottom: 5.3rem;
+        bottom: 7rem;
     }
 
 }
 @media screen and (max-width:345px){
-    html{
-        font-size: 45%;
-    }
+    
     #downrightgrp{
         width: 150px;
     }
@@ -564,27 +565,22 @@ img{
         bottom: -45px;
     }
     .formdiv h1{
-        top: 11.3%;
-        font-size: 4.6rem;
+        font-size: 4rem;
     }
 }
 @media screen and (max-width:332px){
     
     .formdiv h1{
-        top: 11.3%;
-        font-size: 4rem;
-    }
-    .formdiv h5{
-        top: 21.5%;
+        font-size: 3.8rem;
     }
 }
 @media screen and (max-width:295px){
     
     .formdiv h1{
-        top: 11.3%;
-        font-size: 3.5rem;
+        font-size: 3.3rem;
     }
     .formdiv h5{
-        top: 20%;
+        top: 15%;
+        margin: 0 1rem;
     }
 }
